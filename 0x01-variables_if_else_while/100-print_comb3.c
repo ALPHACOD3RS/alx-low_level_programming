@@ -11,43 +11,32 @@
 
 int main(void)
 {
-	int a = 0;
+	int a;
 	int b;
 
-	/*print the first digit*/
-	while (a < 10)
+	/*print the first digit of the combination*/
+	for (a = 0; a < 10; a++)
 	{
-		/**
-		 * we have to initialize
-		 * the second digit here
-		*/
-		b = 0;
-
-		/*print the second digit*/
-		while (b < 10)
+		/*print the second digit of the combination*/
+		for (b = 0; b < 10; b++)
 		{
 			/**
-			 * never print two digits that are the same
-			 * and make sure the first digit is less
-			 * that the second digit.
+			 * don't print same two digits
+			 * and make sure first digit is
+			 * less than second digit
 			*/
 			if (a != b && a < b)
 			{
 				putchar(a + '0');
 				putchar(b + '0');
 
-				/*don't place a comma and space after 89*/
 				if (a + b != 17)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-
-			b++;
 		}
-
-		a++;
 	}
 
 
